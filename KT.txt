@@ -1,0 +1,41 @@
+
+PMO sangavij@virtusa.com --->proj creation,deallocation
+
+CM sheet --->vani and babu prepared..	
+
+Escaltaion--Sharath Venkata Krishne Gowda <sharathvkg@virtusa.com> 
+
+CSM--Fredrick Horwitz 
+
+Project creation---sheet
+
+Allocation report...
+
+
+Group SBU	SBU Segment	Account  Operating unit
+
+BFS Genuis-->EMUS MID WEST    PNC Bank   Vcorp
+
+Naga kiran for chorus migration
+
+Vikas Sahay <vsahay@virtusa.com> ---Review head to PNC
+
+changing the proj status to work at risk
+
+
+check %units based on  allocation
+
+To map the resource to me.
+velocity-->checkin-->Project settings-->select proj-->Manage delegates-->add name for delegate
+
+Approval time
+velocity-->checkin-->time approval
+
+
+velocity-->checkin-->Consilated time report
+
+pivot tabke
+time record-->total hrs
+
+dmi
+chorus--->slect proj--execute ---prject health profile
