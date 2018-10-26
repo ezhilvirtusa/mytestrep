@@ -1,0 +1,34 @@
+
+stages
+stage('checkout'){
+git credentialsId: 'gitcred', url:http'
+}
+
+stage('package')
+def mvnHome= tool name:'maven3',type:'maven'
+def mvncmd="$mvnHOME}/bin/mvn"
+sh "${mvncmd} clean package"
+}
+
+stage('Build Docker image'){
+sh 'docker build -t user/app .'
+}
+
+stage('Push Docker image'){
+withCredentials([string(credentialsId:'dockerpwd',variable:'dockerhubpwd')]){
+	sh "docker login  -u ezhil -p ${dockepass}"
+}
+sh 'docker push user/app'
+}
+
+stage('Run container'){
+def dockerRun='docker run -p 8080:8080 -d -name myap user/app'
+sshagent(['dev-server']) {
+sh 'ssh -o StrictHostkeyChecking-no ec2-user@ip ${dockerpass}'
+}
+}
+}
+
+
+FROM tomcat:8
+COPY target/*.war /usr/local/tomcat/webapps/
